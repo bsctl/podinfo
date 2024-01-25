@@ -1,20 +1,25 @@
+# The fleet.yaml is always at the root
+# relative to the path of the GitRepo
+
 namespace: bsctl
+defaultNamespace: bsctl
 
 targetCustomizations:
+
   - name: dev-internal
     namespace: bsctl
-    helm:
-      values:
-        replicaCount: 0
     clusterSelector:
       matchLabels:
         environment: dev-internal
+    helm:
+      valuesFiles: 
+        - values-prod.yaml
 
   - name: prod-internal
+    clusterSelector:
+      matchLabels:
+        environment: prod-internal
     namespace: bsctl
     helm:
       values:
         replicaCount: 0
-    clusterSelector:
-      matchLabels:
-        environment: prod-internal
