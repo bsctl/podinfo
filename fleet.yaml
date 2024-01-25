@@ -7,14 +7,14 @@ targetCustomizations:
   - name: dev-internal
     helm:
       values:
-        replicaCount: 5
+        replicaCount: 8
     clusterSelector:
       matchLabels:
         environment: dev-internal
   - name: prod-internal
     helm:
       values:
-        replicaCount: 1
+        replicaCount: 2
     clusterSelector:
       matchLabels:
         environment: prod-internal
