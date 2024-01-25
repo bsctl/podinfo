@@ -2,6 +2,7 @@ namespace: bsctl
 
 targetCustomizations:
   - name: dev-internal
+    namespace: bsctl
     helm:
       values:
         replicaCount: 8
@@ -10,6 +11,7 @@ targetCustomizations:
         environment: dev-internal
 
   - name: prod-internal
+    namespace: bsctl
     helm:
       values:
         replicaCount: 5
