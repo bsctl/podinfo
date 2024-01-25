@@ -5,7 +5,6 @@ namespace: bsctl
 defaultNamespace: bsctl
 
 targetCustomizations:
-
   - name: dev-internal
     namespace: bsctl
     clusterSelector:
@@ -14,9 +13,6 @@ targetCustomizations:
     helm:
       values:
         replicaCount: 1
-      #valuesFiles: 
-      #  - values-dev.yaml
-
   - name: prod-internal
     clusterSelector:
       matchLabels:
