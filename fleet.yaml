@@ -1,0 +1,12 @@
+
+defaultNamespace: bsctl
+#dependsOn:
+#  - name: applications-config-applications-rancher-logging-crd
+
+helm:
+  chart: ./chart
+  releaseName: podinfo
+  valuesFiles:
+    - chart/values.yaml
+    - chart/values-prod.yaml
+
