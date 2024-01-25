@@ -13,7 +13,7 @@ targetCustomizations:
         environment: dev-internal
     helm:
       valuesFiles: 
-        - values-prod.yaml
+        - chart/values-prod.yaml
 
   - name: prod-internal
     clusterSelector:
