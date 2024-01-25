@@ -9,7 +9,7 @@ targetCustomizations:
     namespace: bsctl
     helm:
       values:
-        replicaCount: 
+        replicaCount: 3
     clusterSelector:
       matchLabels:
         environment: dev-internal
