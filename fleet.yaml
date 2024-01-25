@@ -6,7 +6,8 @@ namespace: bsctl
 helm:
   chart: ./chart
   releaseName: podinfo
-
+  valuesFiles:
+    - chart/values.yaml
 targetCustomizations:
   - name: dev-internal
     helm:
@@ -18,7 +19,7 @@ targetCustomizations:
   - name: prod-internal
     helm:
       values:
-        replicaCount: 2
+        replicaCount: 4
     clusterSelector:
       matchLabels:
         environment: prod-internal
