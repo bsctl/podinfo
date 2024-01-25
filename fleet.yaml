@@ -6,8 +6,8 @@ defaultNamespace: bsctl
 helm:
   chart: ./chart
   releaseName: podinfo
-  #valuesFiles:
-  #  - chart/values.yaml
+  valuesFiles:
+    - chart/values.yaml
 
 targetCustomizations:
 - name: dev-internal
