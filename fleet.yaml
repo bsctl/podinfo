@@ -10,3 +10,18 @@ helm:
     - chart/values.yaml
     - chart/values-prod.yaml
 
+targetCustomizations:
+- name: dev-internal
+  helm:
+    values:
+      replicaCount: 3
+  clusterSelector:
+    matchLabels:
+      environment: dev-internal
+- name: testing
+  helm:
+    values:
+      replicaCount: 6
+  clusterSelector:
+    matchLabels:
+      environment: testing
