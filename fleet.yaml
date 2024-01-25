@@ -7,17 +7,17 @@ defaultNamespace: bsctl
 targetCustomizations:
   - name: dev-internal
     namespace: bsctl
+    helm:
+      values:
+        replicaCount: 
     clusterSelector:
       matchLabels:
         environment: dev-internal
-    helm:
-      values:
-        replicaCount: 1
   - name: prod-internal
-    clusterSelector:
-      matchLabels:
-        environment: prod-internal
     namespace: bsctl
     helm:
       values:
         replicaCount: 1
+    clusterSelector:
+      matchLabels:
+        environment: prod-internal
