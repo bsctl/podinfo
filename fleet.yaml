@@ -22,4 +22,4 @@ targetCustomizations:
     namespace: bsctl
     helm:
       values:
-        replicaCount: 0
+        replicaCount: 1
