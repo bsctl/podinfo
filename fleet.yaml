@@ -7,7 +7,7 @@ targetCustomizations:
   - name: dev-internal
     helm:
       values:
-        replicaCount: 3
+        replicaCount: 5
     clusterSelector:
       matchLabels:
         environment: dev-internal
