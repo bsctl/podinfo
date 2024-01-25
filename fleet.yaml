@@ -2,11 +2,9 @@
 # relative to the path of the GitRepo
 
 namespace: bsctl
-defaultNamespace: bsctl
 
 targetCustomizations:
   - name: dev-internal
-    namespace: bsctl
     helm:
       values:
         replicaCount: 3
@@ -14,7 +12,6 @@ targetCustomizations:
       matchLabels:
         environment: dev-internal
   - name: prod-internal
-    namespace: bsctl
     helm:
       values:
         replicaCount: 1
