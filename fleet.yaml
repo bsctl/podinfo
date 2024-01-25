@@ -6,22 +6,21 @@ defaultNamespace: bsctl
 helm:
   chart: ./chart
   releaseName: podinfo
-  #valuesFiles:
-  #  - chart/values.yaml
-  #  - chart/values-prod.yaml
+  valuesFiles:
+    - chart/values.yaml
 
 targetCustomizations:
 - name: dev-internal
   helm:
     values:
-      replicaCount: 0
+      replicaCount: 3
   clusterSelector:
     matchLabels:
       environment: dev-internal
 - name: testing
   helm:
     values:
-      replicaCount: 0
+      replicaCount: 5
   clusterSelector:
     matchLabels:
       environment: testing
