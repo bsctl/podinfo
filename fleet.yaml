@@ -10,6 +10,7 @@ helm:
     - chart/values.yaml
 
 targetCustomizations:
+
 - name: dev-internal
   helm:
     values:
@@ -17,6 +18,7 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       environment: dev-internal
+
 - name: testing
   helm:
     values:
@@ -24,3 +26,8 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       environment: testing
+    matchExpressions:
+      - key: provider.cattle.io # not in local
+        operator: NotIn
+        values:
+          - harvester
