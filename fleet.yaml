@@ -19,15 +19,10 @@ targetCustomizations:
     matchLabels:
       environment: dev-internal
 
-- name: testing
+- name: prod-internal
   helm:
     values:
       replicaCount: 5
   clusterSelector:
     matchLabels:
-      environment: testing
-    matchExpressions:
-      - key: provider.cattle.io # not in local
-        operator: NotIn
-        values:
-          - harvester
+      environment: prod-internal
