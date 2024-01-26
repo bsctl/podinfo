@@ -7,13 +7,13 @@ helm:
   chart: ./chart
   releaseName: podinfo
   valueFiles:
-  - ./values.yaml
+  - values.yaml
 targetCustomizations:
   - name: dev-internal
     helm:
       chart: ./chart
       valuesFiles: 
-        - ./values-dev.yaml
+        - values-dev.yaml
 
   - name: prod-internal
     helm:
