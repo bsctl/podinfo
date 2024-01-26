@@ -9,8 +9,10 @@ helm:
 targetCustomizations:
   - name: dev-internal
     helm: 
-      valuesFiles:
-      - values-dev.yaml
+      values:
+        replicaCount: 8
+        redis:
+          enabled: false
 
   - name: prod-internal
     helm:
