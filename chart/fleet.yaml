@@ -23,6 +23,9 @@ namespace: bsctl
 defaultNamespace: bsctl
 helm:
   releaseName: pisolo
+  valuesFiles:
+  - values.yaml
+
 targetCustomizations:
 
   - name: prod-internal
