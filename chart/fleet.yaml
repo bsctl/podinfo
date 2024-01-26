@@ -40,4 +40,5 @@ targetCustomizations:
     clusterSelector:
       matchLabels:
         environment: dev-internal
-    helm: {}
+    helm:
+      foo: bas
