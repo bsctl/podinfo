@@ -6,11 +6,6 @@ namespace: bsctl
 helm:
   chart: ./chart
   releaseName: podinfo
-  valuesFiles:
-    - chart/values.yaml
-    - chart/values-dev.yaml
-    - chart/values-prod.yaml
-
 targetCustomizations:
   - name: dev-internal
     helm: 
