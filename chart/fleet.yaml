@@ -20,8 +20,8 @@
 # │   └── fleet.yaml
 
 namespace: bsctl
-helm:
-  chart: ./chart
+#helm:
+#  chart: ./chart
 targetCustomizations:
   - name: dev-internal
     clusterSelector:
