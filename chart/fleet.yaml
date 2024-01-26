@@ -20,7 +20,6 @@
 #    └── values.yaml
 
 namespace: bsctl
-defaultNamespace: bsctl
 paused: true
 helm:
   releaseName: pisolo
