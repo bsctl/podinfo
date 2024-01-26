@@ -11,7 +11,7 @@ targetCustomizations:
     helm:
       chart: ./chart
       valuesFiles: 
-        - ./chart/values.yaml
+        - ./values-dev.yaml
 
   - name: prod-internal
     helm:
