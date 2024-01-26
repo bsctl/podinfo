@@ -24,7 +24,8 @@ defaultNamespace: bsctl
 
 helm:
   releaseName: pisolo
-
+  valuesFiles: 
+    - ./chart/values.yaml
 targetCustomizations:
   - name: dev-internal
     clusterSelector:
