@@ -17,6 +17,6 @@ targetCustomizations:
       matchLabels:
         environment: prod-internal
     helm:
-      values:
-        replicaCount: 3
+      values: {}
+
 
