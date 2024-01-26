@@ -6,6 +6,7 @@ namespace: bsctl
 helm:
   chart: ./chart
   releaseName: podinfo
+  version: master
   valueFiles:
   - values.yaml
 targetCustomizations:
