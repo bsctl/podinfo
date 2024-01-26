@@ -41,4 +41,4 @@ targetCustomizations:
       matchLabels:
         environment: dev-internal
     helm:
-      foo: bas
+      values:
