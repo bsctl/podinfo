@@ -6,22 +6,24 @@
 # metadata:
 #   name: bsctl
 # spec:
-#   paths: []
+#   paths: [/chart]
 #   repo: https://github.com/bsctl/podinfo.git
 #
 
 # podinfo
-# ├── chart
-# │   ├── Chart.yaml
-# │   ├── LICENSE
-# │   ├── README.md
-# │   ├── templates
-# │   ├── values.yaml
-# │   └── fleet.yaml
+# └── chart
+#    ├── Chart.yaml
+#    ├── LICENSE
+#    ├── README.md
+#    ├── fleet.yaml
+#    ├── templates
+#    └── values.yaml
 
 namespace: bsctl
-#helm:
-#  chart: ./chart
+defaultNamespace: bsctl
+paused: true
+helm:
+  releaseName: pisolo
 targetCustomizations:
   - name: dev-internal
     clusterSelector:
