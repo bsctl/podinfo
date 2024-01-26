@@ -30,7 +30,7 @@ targetCustomizations:
         environment: dev-internal
     helm:
       values:
-        replicaCount: 16
+        replicaCount: 1
 
   - name: prod-internal
     clusterSelector:
@@ -38,5 +38,5 @@ targetCustomizations:
         environment: prod-internal
     helm:
       values:
-        replicaCount: 8
+        replicaCount: 1
 
