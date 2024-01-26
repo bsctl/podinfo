@@ -81,7 +81,7 @@ hpa:
 cache: ""
 # Redis deployment
 redis:
-  enabled: true
+  enabled: false
   repository: redis
   tag: 7.0.7
 
