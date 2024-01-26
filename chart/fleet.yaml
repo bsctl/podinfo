@@ -23,7 +23,6 @@ namespace: bsctl
 defaultNamespace: bsctl
 helm:
   releaseName: pisolo
-  chart: ./chart
 targetCustomizations:
   - name: dev-internal
     clusterSelector:
@@ -32,15 +31,11 @@ targetCustomizations:
     helm:
       values:
         replicaCount: 16
-    kustomize:
-      dir: overlays/dev-internal
 
   - name: prod-internal
     clusterSelector:
       matchLabels:
         environment: prod-internal
-    kustomize:
-      dir: overlays/dev-internal
     helm:
       values:
         replicaCount: 8
