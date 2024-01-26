@@ -42,3 +42,5 @@ targetCustomizations:
         environment: dev-internal
     helm:
       values:
+        ui:
+          color: "#3455"
