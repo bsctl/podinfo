@@ -17,6 +17,6 @@ targetCustomizations:
       matchLabels:
         environment: prod-internal
     helm:
-      values: {}
+      values:
 
 
