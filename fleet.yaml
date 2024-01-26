@@ -32,9 +32,5 @@ targetCustomizations:
       values:
         replicaCount: 18
 
-  - name: prod-internal
-    clusterSelector:
-      matchLabels:
-        environment: prod-internal
 
 
