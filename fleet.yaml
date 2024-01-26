@@ -1,6 +1,12 @@
 # The fleet.yaml is always at the root
 # relative to the path of the GitRepo
 
+namespace: bsctl
+
+helm:
+  releaseName: podinfo
+  version: master
+
 targetCustomizations:
   - name: dev-internal
     clusterSelector:
@@ -8,7 +14,7 @@ targetCustomizations:
         environment: dev-internal
     helm:
       values:
-        replicaCount: 5
+        replicaCount: 3
 
   - name: prod-internal
     clusterSelector:
