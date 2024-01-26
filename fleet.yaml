@@ -10,9 +10,9 @@ targetCustomizations:
   - name: dev-internal
     helm: 
       values:
-        replicaCount: 5
+        replicaCount: 0
         redis:
-          enabled: true
+          enabled: false
 
   - name: prod-internal
     helm:
