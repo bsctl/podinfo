@@ -21,9 +21,10 @@
 
 namespace: bsctl
 defaultNamespace: bsctl
+
 helm:
   releaseName: pisolo
-  chart: ./chart
+
 targetCustomizations:
   - name: dev-internal
     clusterSelector:
