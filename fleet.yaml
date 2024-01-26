@@ -25,8 +25,8 @@ targetCustomizations:
       matchLabels:
         environment: dev-internal
     helm:
-      values:
-        replicaCount: 6
+      valuesFiles:
+        - values-dev.yaml
 
   - name: prod-internal
     clusterSelector:
