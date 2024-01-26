@@ -1,0 +1,8 @@
+resources:
+- ../../base
+
+patchesStrategicMerge:
+- inibitios-agcom-external-secret.yaml
+- inibitios-app-external-secret.yaml
+- inibitios-db-external-secret.yaml
+- inibitios-regcred-external-secret.yaml
