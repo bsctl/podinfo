@@ -1,6 +1,21 @@
 # The fleet.yaml is always at the root
 # relative to the path of the GitRepo
 
+# apiVersion: fleet.cattle.io/v1alpha1
+# kind: GitRepo
+# metadata:
+#   name: bsctl
+# spec:
+#   paths:
+#     -/chart
+#   repo: https://github.com/bsctl/podinfo.git
+
+
+
+
+
+
+
 namespace: bsctl
 
 targetCustomizations:
@@ -9,8 +24,8 @@ targetCustomizations:
       matchLabels:
         environment: dev-internal
     helm:
-      valueFiles:
-      - ./values-dev.yaml
+      values:
+        replicaCount: 2
 
   - name: prod-internal
     clusterSelector:
