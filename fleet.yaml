@@ -4,6 +4,7 @@
 namespace: bsctl
 
 helm:
+  chart: ./chart
   releaseName: podinfo
 targetCustomizations:
   - name: dev-internal
