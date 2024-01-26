@@ -102,7 +102,7 @@ serviceAccount:
 securityContext: {}
 
 ingress:
-  enabled: false
+  enabled: true
   className: ""
   additionalLabels: {}
   annotations: {}
