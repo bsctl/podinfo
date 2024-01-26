@@ -6,14 +6,18 @@
 # metadata:
 #   name: bsctl
 # spec:
-#   paths:
-#     -/chart
+#   paths: []
 #   repo: https://github.com/bsctl/podinfo.git
+#
 
-
-
-
-
+# podinfo
+# ├── chart
+# │   ├── Chart.yaml
+# │   ├── LICENSE
+# │   ├── README.md
+# │   ├── templates
+# │   └── values.yaml
+# └── fleet.yaml
 
 
 namespace: bsctl
@@ -32,7 +36,5 @@ targetCustomizations:
     clusterSelector:
       matchLabels:
         environment: prod-internal
-    helm:
-      values:
-        replicaCount: 2
+
 
