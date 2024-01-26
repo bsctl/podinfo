@@ -4,22 +4,23 @@
 namespace: bsctl
 
 helm:
-  chart: ./chart
   releaseName: podinfo
   version: master
-  valueFiles:
-  - values.yaml
+
 targetCustomizations:
   - name: dev-internal
+    clusterSelector:
+      matchLabels:
+        environment: dev-internal
     helm:
-      chart: ./chart
       valuesFiles: 
         - values-dev.yaml
 
   - name: prod-internal
-    helm:
-      values:
-        replicaCount: 0
     clusterSelector:
       matchLabels:
         environment: prod-internal
+    helm:
+      values:
+        replicaCount: 3
+
