@@ -12,7 +12,7 @@ targetCustomizations:
       values:
         replicaCount: 8
         redis:
-          enabled: false
+          enabled: true
 
   - name: prod-internal
     helm:
