@@ -16,9 +16,8 @@
 # │   ├── LICENSE
 # │   ├── README.md
 # │   ├── templates
-# │   └── values.yaml
-# └── fleet.yaml
-
+# │   ├── values.yaml
+# │   └── fleet.yaml
 
 namespace: bsctl
 helm:
